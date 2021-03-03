@@ -15,11 +15,11 @@ const typeDefs = gql`
   }
 
   type Query {
-    classified: [Classified!]!
+    classifieds: [Classified!]!
   }
 
   type Mutation {
-    createClassified(): Classified!
+    createClassified(title: String!): Response!
   }
 
   type Subscription {
