@@ -5,10 +5,10 @@ const typeDefs = require("./typeDefs");
 
 const PORT = process.env.PORT || 5000;
 
-const server = ApolloServer({
+const server = new ApolloServer({
    resolvers,
    typeDefs,
-   subscription: {
+   subscriptions: {
      onConnect: () => console.log("New client"),
    }
 })
