@@ -32,7 +32,7 @@ const resolvers = {
     createClassified: (_, { title }) => {
 
       const newClassifed = {
-        id: 'id',
+        id: classifieds.length + 1,
         title, 
       }
 
