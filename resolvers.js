@@ -24,7 +24,15 @@ const resolvers = {
 
   Query: {
 
-    classifieds: () => classifieds,
+    classifieds: (_, { cat }) => {
+
+      if (cat === "Hello") {
+
+        return []
+      }
+      
+      return classifieds
+    },
   },
 
   Mutation: {

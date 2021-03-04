@@ -15,7 +15,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    classifieds: [Classified!]!
+    classifieds(cat: String!): [Classified!]!
   }
 
   type Mutation {
